@@ -18,7 +18,6 @@ int main()
     else
     {
         printf("Not Spy Number");
-        
     }
     return 0;
 }

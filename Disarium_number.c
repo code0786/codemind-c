@@ -1,26 +1,46 @@
 #include<stdio.h>
 #include<math.h>
+int size(int num)
+{
+    int c=0;
+    while(num>0)
+    {
+        c++;
+        num/=10;
+    }
+    return c;
+}
+int rev(int num)
+{
+    int s=0,r;
+    while(num>0)
+    {
+        r=num%10;
+        s=(s*10)+r;
+        num=num/10;
+    }
+    return s;
+}
 int main()
 {
-    int a,i=0,j,u,s=0,t;
+    int a;
     scanf("%d",&a);
-    u=t=a;
-    while(a!=0)
+    int ar=rev(a);
+    int i,sum=0,c=size(a),j=1;
+    while(ar>0)
     {
-        j=a%10;
-        a/=10;
-        i++;
+        int dig=ar%10;
+        sum+=pow(dig,j);
+        j++;
+        ar/=10;
     }
-    j=0;
-    for(;i>0;i--)
+    if(sum==a)
     {
-        j=u%10;
-        s+=pow(j,i);
-        u/=10;
+        printf("True");
     }
-    if(s==t)
-    printf("True");
     else
-    printf("False");
+    {
+        printf("False");
+    }
     return 0;
 }

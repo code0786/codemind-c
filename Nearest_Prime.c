@@ -42,10 +42,12 @@ void fun(int a)
 int main()
 {
     int n,x;
-    scanf("%d",&n);
+    scanf("%d
+",&n);
     while(n)
     {
-        scanf("%d",&x);
+        scanf("%d
+",&x);
         fun(x);
         n--;
     }

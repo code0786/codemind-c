@@ -1,26 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int a;
-    scanf("%d",&a);
-    int arr[100],i,fa=0,fb=1,temp;
-    for(i=0;i<100;i++)
+    int first=0,second=1,next=0,number;
+    scanf("%d",&number);
+    while(number>next)
     {
-        arr[i]=fa;
-        temp=fa+fb;
-        fa=fb;
-        fb=temp;
+        next=first+second;
+        first=second;
+        second=next;
     }
-    int flag=0;
-    for(i=0;i<100;i++)
-    {
-        if(arr[i]==a)
-        {
-            flag=1;
-            break;
-        }
-    }
-    if(flag==1)
+    if(number==next)
     {
         printf("True");
     }
@@ -28,5 +17,4 @@ int main()
     {
         printf("False");
     }
-    return 0;
 }

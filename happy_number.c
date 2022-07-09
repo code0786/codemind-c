@@ -6,12 +6,12 @@ int main()
     scanf("%d",&number);
     while(sum!=1 || sum!=7)
     {
-        while (number)
+        while(number)
         {
             temp+=pow(number%10,2);
             number/=10;
         }
-        if (temp>9)
+        if(temp>9)
         {
             number=temp;
             temp=0;
@@ -21,7 +21,7 @@ int main()
             printf("True");
             break;
         }
-        else if (temp==7)
+        else if(temp==7)
         {
             printf("True");
             break;

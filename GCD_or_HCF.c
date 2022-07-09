@@ -1,27 +1,18 @@
 #include<stdio.h>
 int main()
 {
-    int a,b;
-    scanf("%d%d",&a,&b);
-    int hcf=1,i,max;
-    if(a>b)
+    int first,second;
+    scanf("%d%d",&first,&second);
+    while(first!=second)
     {
-        max=a;
-    }
-    else
-    {
-        max=b;
-    }
-    for(i=1;i<max;i++)
-    {
-        if(a%i==0 && b%i==0)
+        if(first>second)
         {
-            if(i>hcf)
-            {
-                hcf=i;
-            }
+            first-=second;
+        }
+        else
+        {
+            second-=first;
         }
     }
-    printf("%d",hcf);
-    return 0;
+    printf("%d",first);
 }

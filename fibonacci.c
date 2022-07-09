@@ -1,15 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int a;
-    scanf("%d",&a);
-    int fa=0,fb=1,temp,i;
-    for(i=0;i<a;i++)
+    int number,first=0,second=1,next;
+    scanf("%d",&number);
+    printf("%d %d ",first,second);
+    number-=2;
+    while(number)
     {
-        printf("%d ",fa);
-        temp=fa+fb;
-        fa=fb;
-        fb=temp;
+        next=first+second;
+        printf("%d ",next);
+        first=second;
+        second=next;
+        number--;
     }
-    return 0;
 }

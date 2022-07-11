@@ -1,15 +1,13 @@
 #include<stdio.h>
 int main()
 {
-    int k;
-    scanf("%d",&k);
-    for(int z=0;z<k;z++)
+    int n,first,last;
+    scanf("%d",&n);
+    while(n)
     {
-        int a,b;
-        scanf("%d%d",&a,&b);
+        scanf("%d%d",&first,&last);
         printf("%d
-",a+b);
-        
+",first+last);
+        n--;
     }
-    return 0;
 }

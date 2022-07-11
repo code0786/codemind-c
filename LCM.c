@@ -1,20 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int a,b;
-    scanf("%d%d",&a,&b);
-    int lcm=1;
-    while(1)
+    int first,last;
+    scanf("%d%d",&first,&last);
+    for(int i=1;i;i++)
     {
-        if(lcm%a==0 && lcm%b==0)
+        if((first*i)%last==0)
         {
+            printf("%d",first*i);
             break;
         }
-        else
-        {
-            lcm++;
-        }
     }
-    printf("%d",lcm);
-    return 0;
 }
